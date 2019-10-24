@@ -2,7 +2,7 @@
 - hosts: localhost
   connection: local
   tasks:
-  - name: Create resource group
+  - name: Create resource groupa
     azure_rm_resourcegroup:
       name: webserver_user7
       location: northeurope
