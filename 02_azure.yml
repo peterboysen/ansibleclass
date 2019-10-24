@@ -112,3 +112,15 @@
     shell: |
       ssh-copy-id "{{ adminUser }}@{{ webserver_ip_fact }}"
 
+- hosts: webserver
+  become: yes
+  vars:
+    websiteheader: "Ansible Playbook"
+    websiteauthor: "Peter Boysen"
+
+  tasks:
+  - name: Install Apache
+    dnf:
+      name: httpd
+      state: latest
+
